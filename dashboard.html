@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پنل کاربری | OSMIND</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="assets/icons/osmind-logo.svg" alt="OSMIND Logo" />
+        <h2>OSMIND</h2>
+      </div>
+
+      <nav class="menu">
+        <button class="menu-item active" data-page="overview">
+          <i data-lucide="layout-dashboard"></i><span>پیشخوان</span> 
+        </button>
+        <button class="menu-item" data-page="apps">
+          <i data-lucide="app-window"></i><span>اپلیکیشن‌ها</span>
+        </button>
+        <button class="menu-item" data-page="analytics">
+          <i data-lucide="bar-chart-3"></i><span>آمار</span>
+        </button>
+        <button class="menu-item" data-page="settings">
+          <i data-lucide="settings"></i><span>تنظیمات</span>
+        </button>
+      </nav>
+
+      <div class="bottom-section">
+        <button id="logout-btn"><i data-lucide="log-out"></i> خروج</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="page-title">
+          <i data-lucide="layout-dashboard"></i>
+          <h1 id="page-title">پیشخوان</h1>
+        </div>
+        <button id="menu-toggle" class="menu-toggle" style="display: none">
+          <i data-lucide="menu"></i>
+        </button>
+
+        <div class="user-area">
+          <span id="username">👋 سلام، حسین</span>
+          <div class="avatar">H</div>
+        </div>
+      </header>
+
+      <section id="page-content" class="fade-in">
+        <div class="cards">
+          <div class="card glass">
+            <i data-lucide="boxes"></i>
+            <div>
+              <h3>اپ‌های نصب‌شده</h3>
+              <p id="apps-count">۳</p>
+            </div>
+          </div>
+          <div class="card glass">
+            <i data-lucide="brain"></i>
+            <div>
+              <h3>پروژه‌های فعال</h3>
+              <p>۱</p>
+            </div>
+          </div>
+          <div class="card glass">
+            <i data-lucide="clock-9"></i>
+            <div>
+              <h3>آخرین ورود</h3>
+              <p id="last-login">۱۴۰۴/۰۸/۰۷</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="logout-modal" class="modal hidden">
+      <div class="modal-box">
+        <h3>آیا مطمئنی می‌خوای خارج شی؟</h3>
+        <div class="modal-actions">
+          <button id="confirm-logout">بله، خروج</button>
+          <button id="cancel-logout">انصراف</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

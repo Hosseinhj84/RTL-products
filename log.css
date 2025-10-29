@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+body {
+  background: linear-gradient(190deg, #e3f2fd, #c81d1159);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-container {
+  background: #fff;
+  width: 360px;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.form-box {
+  animation: fadeIn 0.4s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+input:focus {
+  border-color: #2196f3;
+  outline: none;
+}
+
+.btn {
+  width: 100%;
+  background: #C81D11;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #ff2020;
+}
+
+.switch-form {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+.switch-form a {
+  color: #f32121;
+  text-decoration: none;
+}
+
+.switch-form a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}

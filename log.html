@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ورود | ثبت‌نام</title>
+  <link rel="stylesheet" href="log.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="form-box" id="login-box">
+      <h2>ورود به حساب</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label>ایمیل</label>
+          <input type="email" id="login-email" placeholder="example@mail.com" required>
+        </div>
+        <div class="form-group">
+          <label>رمز عبور</label>
+          <input type="password" id="login-password" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn">ورود</button>
+      </form>
+      <p class="switch-form">حساب ندارید؟ <a href="#" onclick="showRegister()">ثبت‌نام کنید</a></p>
+    </div>
+
+    <div class="form-box hidden" id="register-box">
+      <h2>ساخت حساب کاربری</h2>
+      <form id="register-form">
+        <div class="form-group">
+          <label>نام کاربری</label>
+          <input type="text" id="reg-username" placeholder="نام کاربری شما" required>
+        </div>
+        <div class="form-group">
+          <label>ایمیل</label>
+          <input type="email" id="reg-email" placeholder="example@mail.com" required>
+        </div>
+        <div class="form-group">
+          <label>رمز عبور</label>
+          <input type="password" id="reg-password" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn">ثبت‌نام</button>
+      </form>
+      <p class="switch-form">قبلاً ثبت‌نام کرده‌اید؟ <a href="#" onclick="showLogin()">وارد شوید</a></p>
+    </div>
+  </div>
+
+  <script src="log.js"></script>
+</body>
+</html>
