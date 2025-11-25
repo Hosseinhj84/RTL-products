@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.intro-btn {
+  position: relative;
+}
+
+.intro-btn::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.6),
+    rgba(124, 58, 237, 0.2),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: 0.35s ease;
+}
+
+.intro-btn:hover::before {
+  opacity: 1;
+}
+
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 8px rgba(124, 58, 237, 0.2),
+      0 0 20px rgba(124, 58, 237, 0.15), 0 0 50px rgba(124, 58, 237, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 14px rgba(124, 58, 237, 0.4),
+      0 0 35px rgba(124, 58, 237, 0.25), 0 0 70px rgba(124, 58, 237, 0.2);
+  }
+}
+
+.intro-btn.neon {
+  animation: neonPulse 2.2s ease-in-out infinite alternate;
+}
+
+#morph-btn {
+  transition: 0.25s ease;
+  position: relative;
+}
+
+#morph-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle,
+    rgba(147, 51, 234, 0.4),
+    rgba(91, 33, 182, 0.1),
+    transparent
+  );
+  opacity: 0;
+  transition: 0.25s ease;
+}
+
+#morph-btn:hover::before {
+  opacity: 1;
+}
